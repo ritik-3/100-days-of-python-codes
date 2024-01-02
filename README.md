@@ -1,1 +1,1 @@
-# 100-days-of-puthon-codes
+# this is my first time learning python, so am using this repository to save my files on git.
