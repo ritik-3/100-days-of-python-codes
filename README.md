@@ -20,4 +20,4 @@ Welcome to my 100 Days of Python Code Learning project! This repository document
 Feel free to suggest improvements or new project ideas.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
