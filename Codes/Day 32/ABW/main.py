@@ -14,8 +14,8 @@ import datetime as dt
 import smtplib
 import random as rand
 
-my_email = "ritik.khapre5202@gmail.com"
-password = "yogljntpycqzitog"
+my_email = "your mail"
+password = "Your pass"
 
 b_days = pd.read_csv("Codes/Day 32/ABW/birthdays.csv")
 now = dt.datetime.now()
