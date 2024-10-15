@@ -7,10 +7,23 @@ MY_LNG = 77.412613
 parameters = {
     "lat" : MY_LAT,
     "lon" : MY_LNG,
-    "appid" : api_key
+    "appid" : api_key,
+    "cnt" : 4,
 }
 
 
 responce = requests.get(OWM_Endpint, params=parameters)
+responce.raise_for_status()
+weather_data = responce.json()
+#print(weather_data["list"][0]["weather"][0])
 
-print(responce.json())
+will_rain = False
+
+for hour_data in weather_data["list"]:
+    condition_code = hour_data["weather"][0]["id"]
+    
+    if int(condition_code)<700:
+        will_rain = True
+        
+if will_rain:
+    print("its gonna rain... :)")
