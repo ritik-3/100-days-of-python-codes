@@ -1,23 +1,22 @@
-#This file will need to use the DataManager,FlightSearch, FlightData, NotificationManager classes to achieve the program requirements.
 import requests
-from amadeus import Client, ResponseError
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from amadeus import Client, ResponseError
 
 # Amadeus API credentials
 amadeus = Client(
-    client_id='Something Something',
-    client_secret='Nothing Nothing'
+    client_id='YOUR_AMADEUS_API_KEY',
+    client_secret='YOUR_AMADEUS_API_SECRET'
 )
 
 # Sheety API URL
-sheety_url = 'sh**y ka url dal do plz'
+sheety_url = 'https://api.sheety.co/your_project/your_sheet/sheet1'
 
-# 
-sender_email = "apkaapna420@gmail.com"
-receiver_email = "samnewaleka420@gmail.com"
-password = "Yetobhulhigyatha"
+# Email configuration
+sender_email = "your_email@example.com"
+receiver_email = "recipient@example.com"
+password = "YOUR_EMAIL_PASSWORD"  # Use app password if using Gmail with 2FA
 
 # Fetch data from Sheety
 response = requests.get(sheety_url)
@@ -91,12 +90,10 @@ if response.status_code == 200:
     try:
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()
-            server.login(user=sender_email, password=password)
+            server.login(sender_email, password)
             server.send_message(msg)
             print("Email sent successfully!")
     except Exception as e:
         print(f"Failed to send email: {e}")
 else:
     print(f"Failed to fetch data from Sheety: {response.status_code}")
-    
-print(cheaper_flights)
