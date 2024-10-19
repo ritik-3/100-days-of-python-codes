@@ -12,9 +12,7 @@ Welcome to my 100 Days of Python Code Learning project! This repository document
 - `projects/`: Small projects created during the challenge
 
 ## Resources
-- Online tutorials
-- Books
-- Documentation
+Udemy "https://www.udemy.com/course/100-days-of-code/?couponCode=KEEPLEARNING"
 
 ## Contributing
 Feel free to suggest improvements or new project ideas.
